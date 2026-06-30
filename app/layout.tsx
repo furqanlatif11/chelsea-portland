@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import { Outfit, Cormorant_Garamond } from "next/font/google";
+import { Outfit, Cormorant_Garamond, Inter } from "next/font/google";
 import "./styles/globals.scss";
+import { cn } from "@/lib/utils";
+import AppConvexProvider from "./convex-provider";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -68,9 +72,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${headingSerif.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", outfit.variable, headingSerif.variable, "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <AppConvexProvider>{children}</AppConvexProvider>
+      </body>
     </html>
   );
 }
