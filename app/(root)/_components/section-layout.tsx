@@ -31,7 +31,7 @@ export default function SectionLayout({
     <section
       id={id}
       className={clsx(
-        "py-16 sm:py-20 lg:py-28 xl:py-32",
+        "py-16 sm:py-16 lg:py-20 xl:py-24",
         background === "primary"
           ? "bg-primary text-white"
           : "bg-[#F4F4F4] text-primary",
@@ -66,7 +66,7 @@ export default function SectionLayout({
           <div className="lg:col-span-8 lg:col-start-7">
             <h2
               className={clsx(
-                "font-heading section-heading",
+                "font-heading section_about-heading",
                 background === "primary" ? "text-white" : "text-slate-900",
                 titleClassName,
               )}

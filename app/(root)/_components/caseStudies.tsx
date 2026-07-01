@@ -16,39 +16,27 @@ export default function CaseStudies() {
     .slice(0, 4);
 
   return (
-    <section
-      id="case-studies"
-      className="bg-[#F4F4F4] py-20 sm:py-24 lg:py-28 xl:py-32"
-    >
+    <section id="case-studies" className="bg-[#F4F4F4] ">
       <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10">
-
         {/* Heading */}
 
         <div className="mb-16 text-center">
-
-          <p className="section-label section-label--center text-secondary mx-auto">
+          <p className="section-label text-secondary mx-auto">
             {settings?.title ?? "Case Studies"}
           </p>
-
         </div>
 
         {/* Grid */}
 
         <div className="mx-auto grid gap-6 lg:grid-cols-2">
-
           {featuredCaseStudies.map((study) => (
-            <CaseStudyCard
-              key={study._id}
-              study={study}
-            />
+            <CaseStudyCard key={study._id} study={study} />
           ))}
-
         </div>
 
         {/* Button */}
 
         <div className="mt-10 sm:mt-14 flex justify-center">
-
           <Link
             href="/case-studies"
             className="
@@ -72,13 +60,9 @@ export default function CaseStudies() {
           "
           >
             View All Case Studies
-
             <ChevronRight size={18} />
-
           </Link>
-
         </div>
-
       </div>
     </section>
   );

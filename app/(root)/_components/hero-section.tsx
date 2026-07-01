@@ -19,8 +19,8 @@ export default function HeroSection() {
 
       {/* Hero Content */}
 
-      <div className="relative z-10 flex min-h-[100svh] items-center justify-center px-4 pt-24 sm:px-6 sm:pt-28 lg:pt-32">
-        <div className="mx-auto max-w-[980px] text-center">
+      <div className="relative z-10 flex min-h-[100svh] items-start justify-center px-4 pt-24 sm:px-6 sm:pt-28 lg:pt-32">
+        <div className="mx-auto mt-24 max-w-[980px] text-center">
           <h1
             className="
               section-heading text-white

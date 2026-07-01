@@ -62,7 +62,7 @@ export default function Services() {
         {/* Heading */}
 
         <div className="mb-16 text-center">
-          <p className="text-secondary section-label section-label--center mx-auto">
+          <p className="text-secondary section-label mx-auto">
             {(sectionSettings?.title ?? "Services").toUpperCase()}
           </p>
         </div>
@@ -78,22 +78,33 @@ export default function Services() {
           {serviceItems.map((service) => (
             <SwiperSlide key={service.id}>
               <div className="grid overflow-hidden bg-white lg:grid-cols-2">
-                {/* Left */}
+                {/* Image */}
 
-                <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-12 xl:p-16">
+                <div className="order-1 relative min-h-[320px] sm:min-h-[420px] lg:order-2 lg:min-h-[560px] xl:min-h-[600px]">
+                  <Image
+                    src={service.image}
+                    alt={service.altText}
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+
+                {/* Content */}
+
+                <div className="order-2 flex flex-col justify-center p-6 sm:p-8 lg:order-1 lg:p-12 xl:p-16">
                   <Image
                     src={service.icon}
                     alt={`${service.title} icon`}
                     width={80}
                     height={80}
-                    className="mb-12"
+                    className="mb-6"
                   />
 
-                  <h2 className="font-heading mb-8 section-subheading text-primary">
+                  <h2 className="font-heading mb-6 section-subheading text-primary">
                     {service.title}
                   </h2>
 
-                  <p className="mb-10 leading-9 text-gray-600">
+                  <p className="mb-10 leading-6 text-gray-600">
                     {service.description}
                   </p>
 
@@ -126,17 +137,6 @@ export default function Services() {
                     <ChevronRight size={18} />
                   </button>
                 </div>
-
-                {/* Right */}
-
-                <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] xl:min-h-[680px]">
-                  <Image
-                    src={service.image}
-                    alt={service.altText}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
               </div>
             </SwiperSlide>
           ))}
@@ -144,7 +144,7 @@ export default function Services() {
 
         {/* Navigation */}
 
-        <div className="mt-12 sm:mt-16 flex justify-center gap-3 sm:gap-5">
+        <div className="mt-4 sm:mt-6 flex justify-center gap-3 sm:gap-5">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="

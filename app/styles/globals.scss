@@ -82,6 +82,20 @@ button {
   }
 }
 
+.section_about-heading {
+  font-size: 2rem;
+  line-height: 1.05;
+  font-weight: 400;
+
+  @media (min-width: 768px) {
+    font-size: 2.7rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+  }
+}
+
 .section-subheading {
   font-size: 2rem;
   line-height: 1.1;
@@ -102,8 +116,10 @@ button {
   line-height: 1.2;
   font-weight: 600;
   padding-bottom: 1rem;
+  text-align: left;
 
   @media (min-width: 768px) {
+    text-align: left;
     font-size: 1.5rem;
   }
 
@@ -116,17 +132,22 @@ button {
     content: "";
     position: absolute;
     left: 0;
+    transform: none;
     bottom: 0;
     width: 60px; 
     height: 2px;
     background-color: var(--color-secondary);
   }
-}
 
-.section-label--center {
-  &::after {
-    left: 50%;
-    transform: translateX(-50%);
+  @media (max-width: 767px) {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
