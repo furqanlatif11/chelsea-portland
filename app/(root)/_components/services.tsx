@@ -56,9 +56,9 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-[#F4F4F4] py-24 lg:py-32"
+      className="bg-[#F4F4F4] py-20 sm:py-24 lg:py-28 xl:py-32"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
 
         {/* Heading */}
 
@@ -90,8 +90,8 @@ export default function Services() {
                   <Image
                     src={service.icon}
                     alt={`${service.title} icon`}
-                    width={64}
-                    height={64}
+                    width={80}
+                    height={80}
                     className="mb-12"
                   />
 
@@ -110,15 +110,18 @@ export default function Services() {
                     items-center
                     gap-8
                     border
-                    border-blue-900
+                    border-[var(--color-primary)]
                     text-primary
                     px-8
                     py-4
                     uppercase
                     tracking-wide
                     transition
-                    hover:bg-blue-900
-                    hover:text-white
+                    hover:border-[var(--color-primary)]
+                    hover:bg-[var(--color-primary)]
+                    hover:!text-white
+                    [&_svg]:text-current
+                    hover:[&_svg]:!text-white
                   "
                   >
                     {service.button}
@@ -160,10 +163,14 @@ export default function Services() {
               items-center
               justify-center
               border
-              border-secondary
+              border-[var(--color-primary)]
+              text-primary
               transition
-              hover:bg-secondary
-              hover:text-white
+              hover:border-[var(--color-primary)]
+              hover:bg-[var(--color-primary)]
+              hover:!text-white
+              [&_svg]:text-current
+              hover:[&_svg]:!text-white
             "
           >
             <ChevronLeft size={24} />
@@ -178,10 +185,14 @@ export default function Services() {
               items-center
               justify-center
               border
-              border-secondary
+              border-[var(--color-primary)]
+              text-primary
               transition
-              hover:bg-secondary
-              hover:text-white
+              hover:border-[var(--color-primary)]
+              hover:bg-[var(--color-primary)]
+              hover:!text-white
+              [&_svg]:text-current
+              hover:[&_svg]:!text-white
             "
           >
             <ChevronRight size={24} />
