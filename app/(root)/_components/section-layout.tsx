@@ -76,7 +76,7 @@ export default function SectionLayout({
 
             <div
               className={clsx(
-                "mt-6 sm:mt-8 space-y-6 sm:space-y-7 text-base sm:text-lg leading-8 sm:leading-9",
+                " sm:mt-8 space-y-6 sm:space-y-7 text-base sm:text-lg leading-8 sm:leading-9",
                 background === "primary" ? "text-white" : "text-slate-600",
                 contentClassName,
               )}
